@@ -1202,7 +1202,7 @@
             <h2 class="section-title">Technical Integration</h2>
             <p class="section-subtitle">The arena for analytical minds and future innovators</p>
             <p class="section-text">
-                The Tech chapter hosts highly anticipated events like the Mathematics Talent Reward Programme (MTRP), a rigorous national-level math olympiad, and SPARQ, a data analytics contest in collaboration with ISI Kolkata's CAIML. Test your calculus mastery in the high-pressure environment of the Integration Bee.
+                The Tech chapter hosts highly anticipated events like the Mathematics Talent Reward Programme (MTRP), a rigorous national-level math olympiad, and SPARQ, a data analytics contest in collaboration with ISI Kolkatas CAIML. Test your calculus mastery in the high-pressure environment of the Integration Bee.
             </p>
             <div class="cta-buttons" style="margin-top: 30px;">
                 <a href="#tech-events" class="btn btn-primary">View All Tech Events</a>
@@ -1352,6 +1352,7 @@
             <div class="tab-buttons">
                 <button class="tab-button active" data-tab="about">About Integration</button>
                 <button class="tab-button" data-tab="venue">Venue</button>
+                <button class="tab-button" data-tab="sponsors">Sponsors</button>
                 <button class="tab-button" data-tab="contact">Contact Us</button>
             </div>
 
@@ -1381,6 +1382,16 @@
                     203 Barrackpore Trunk Road<br>
                     Kolkata, West Bengal 700108<br>
                     India
+                </p>
+            </div>
+
+            <div class="tab-content" id="sponsors">
+                <h3>Our Sponsors</h3>
+                <p>
+                    <!-- Enter stuff -->
+                </p>
+                <p>
+                    <!-- enter stuff -->
                 </p>
             </div>
 
@@ -1852,6 +1863,24 @@
                 }
             });
         });
+				// Tab switching functionality for footer buttons
+				const tabButtons = document.querySelectorAll(".tab-button");
+				const tabContents = document.querySelectorAll(".tab-content");
+
+				tabButtons.forEach(button => {
+				    button.addEventListener("click", () => {
+					const target = button.getAttribute("data-tab");
+
+					// Remove active states
+					tabButtons.forEach(btn => btn.classList.remove("active"));
+					tabContents.forEach(content => content.classList.remove("active"));
+
+					// Add active to selected
+					button.classList.add("active");
+					document.getElementById(target).classList.add("active");
+				    });
+				});
+
     </script>
 </body>
 </html>
